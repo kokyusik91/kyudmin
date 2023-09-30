@@ -42,7 +42,10 @@ export default function StoreModal() {
     try {
       setLoading(true);
       const response = await axios.post('/api/stores', values);
-      toast.success('Store created!');
+      // toast.success('Store created!');
+      // 왜 router사용하지 않고, window를 사용했냐??
+      // window 객체 사용시 새로고침이 일어나면서, DB가 준비안되고, 여러 케이스가 있을 수 있다.
+      window.location.assign(`/${response.data.id}`);
     } catch (error) {
       toast.error('Something went wrong.');
       console.log(error);
