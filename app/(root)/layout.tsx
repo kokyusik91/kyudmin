@@ -13,7 +13,7 @@ export default async function SetupLayout({
   if (!userId) {
     redirect('/sign-in');
   }
-
+  // 유저 아이디만 가지고, 상점정보들중 첫번째 녀석을 가져옴
   const store = await prismadb.store.findFirst({
     where: {
       userId,
