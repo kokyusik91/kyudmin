@@ -1,9 +1,7 @@
 'use client';
 
-import Modal from '@/components/ui/modal';
-import { useStoreModal } from '@/hooks/use-store-modal';
-import { UserButton } from '@clerk/nextjs';
 import { useEffect } from 'react';
+import { useStoreModal } from '@/hooks/use-store-modal';
 
 export default function SetupPage() {
   // 뭔가 redux의 useSelector 같은 느낌이랄까?!
@@ -16,5 +14,5 @@ export default function SetupPage() {
     }
   }, [isOpen, onOpen]);
 
-  return <div className='p-4'>Root Page</div>;
+  return null;
 }
