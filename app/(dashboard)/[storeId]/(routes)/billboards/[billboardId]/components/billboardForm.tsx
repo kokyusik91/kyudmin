@@ -2,7 +2,6 @@
 
 import AlertModal from '@/components/modals/alert-modal';
 import Heading from '@/components/ui/Heading';
-import ApiAlert from '@/components/ui/api-alert';
 import { Button } from '@/components/ui/button';
 import {
   Form,
@@ -15,9 +14,8 @@ import {
 import ImageUpload from '@/components/ui/image-upload';
 import { Input } from '@/components/ui/input';
 import { Separator } from '@/components/ui/separator';
-import { useOrigin } from '@/hooks/use-origin';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Billboard, Store } from '@prisma/client';
+import { Billboard } from '@prisma/client';
 import axios from 'axios';
 import { Trash } from 'lucide-react';
 import { useParams, useRouter } from 'next/navigation';
@@ -40,7 +38,6 @@ interface BillboardFormProps {
 export default function BillboardForm({ initialData }: BillboardFormProps) {
   const params = useParams();
   const router = useRouter();
-  const origin = useOrigin();
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
 
