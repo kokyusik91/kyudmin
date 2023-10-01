@@ -22,11 +22,17 @@ export default function MainNav({
       label: 'Billboards',
       active: pathname === `/${params.storeId}`,
     },
-    // storeId에 대한 빌보드 리스트 페이지
+    // storeId에 대한 카테고리 리스트 페이지
     {
       href: `/${params.storeId}/categories`,
       label: 'Categories',
       active: pathname === `/${params.storeId}/categories`,
+    },
+    // storeId에 대한 사이즈 리스트 페이지
+    {
+      href: `/${params.storeId}/sizes`,
+      label: 'Sizes',
+      active: pathname === `/${params.storeId}/sizes`,
     },
     // storeId에 대한 셋팅 페이지
     {
