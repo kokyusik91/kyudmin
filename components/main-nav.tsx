@@ -16,6 +16,13 @@ export default function MainNav({
       label: 'Overview',
       active: pathname === `/${params.storeId}`,
     },
+    // storeId에 대한 빌보드 리스트 페이지
+    {
+      href: `/${params.storeId}/billboards`,
+      label: 'Billboards',
+      active: pathname === `/${params.storeId}`,
+    },
+    // storeId에 대한 셋팅 페이지
     {
       href: `/${params.storeId}/settings`,
       label: 'Settings',
