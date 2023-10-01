@@ -34,6 +34,12 @@ export default function MainNav({
       label: 'Sizes',
       active: pathname === `/${params.storeId}/sizes`,
     },
+    // storeId에 대한 컬러 리스트 페이지
+    {
+      href: `/${params.storeId}/colors`,
+      label: 'Colors',
+      active: pathname === `/${params.storeId}/colors`,
+    },
     // storeId에 대한 셋팅 페이지
     {
       href: `/${params.storeId}/settings`,
