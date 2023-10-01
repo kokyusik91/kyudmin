@@ -40,6 +40,12 @@ export default function MainNav({
       label: 'Colors',
       active: pathname === `/${params.storeId}/colors`,
     },
+    // storeId에 대한 제품 리스트 페이지
+    {
+      href: `/${params.storeId}/products`,
+      label: 'Products',
+      active: pathname === `/${params.storeId}/products`,
+    },
     // storeId에 대한 셋팅 페이지
     {
       href: `/${params.storeId}/settings`,
