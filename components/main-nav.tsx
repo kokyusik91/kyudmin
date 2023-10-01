@@ -46,6 +46,12 @@ export default function MainNav({
       label: 'Products',
       active: pathname === `/${params.storeId}/products`,
     },
+    // storeId에 대한 제품 리스트 페이지
+    {
+      href: `/${params.storeId}/orders`,
+      label: 'Orders',
+      active: pathname === `/${params.storeId}/orders`,
+    },
     // storeId에 대한 셋팅 페이지
     {
       href: `/${params.storeId}/settings`,
