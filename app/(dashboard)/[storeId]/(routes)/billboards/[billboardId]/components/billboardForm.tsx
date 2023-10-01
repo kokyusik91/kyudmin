@@ -81,10 +81,10 @@ export default function BillboardForm({ initialData }: BillboardFormProps) {
     try {
       setLoading(true);
       await axios.delete(
-        `/api/stores/${params.storeId}/billboards/${params.billboardId}`
+        `/api/${params.storeId}/billboards/${params.billboardId}`
       );
       router.refresh();
-      router.push('/');
+      router.push(`/${params.storeId}/billboards`);
       toast.success('Billboard Deleted');
     } catch (error) {
       toast.error(
@@ -167,7 +167,6 @@ export default function BillboardForm({ initialData }: BillboardFormProps) {
           </Button>
         </form>
       </Form>
-      <Separator />
     </>
   );
 }
