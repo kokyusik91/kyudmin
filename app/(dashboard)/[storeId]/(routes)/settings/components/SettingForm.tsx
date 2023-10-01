@@ -83,6 +83,7 @@ export default function SettingForm({ initialData }: SettingFormProps) {
         onConfirm={onDelete}
         loading={loading}
       />
+      {/* Heading : 상단으로 빼도 괜찮을 것 같은데 ㅋㅋ */}
       <div className='flex items-center justify-between'>
         <Heading title='Settings' description='Mange store preferences' />
         <Button
@@ -126,6 +127,7 @@ export default function SettingForm({ initialData }: SettingFormProps) {
         </form>
       </Form>
       <Separator />
+      {/* API 들이 나열되는 영역 */}
       <ApiAlert
         title='NEXT_PUBLIC_API_URL'
         description={`${origin}/api/${params.storeId}`}
